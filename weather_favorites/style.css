@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.search-container {
+    background-color: #FFFFFF;
+    border          : solid 1px black;
+    justify-content : space-between;
+    padding         : 11px 15px;
+}
+
+.search-input {
+    font-family     : Roboto;
+    font-size       : 18px;
+    font-weight     : 400;
+    line-height     : 21px;
+    letter-spacing  : 0em;
+    text-align      : left;
+    background-color: #FFFFFF;
+    box-sizing      : border-box;
+    line-height     : 21.09px;
+    width           : 100%;
+    padding         : 0 15px 0 15px;
+    height          : 100%;
+    padding         : 3px;
+}
+
+.search-button {
+    display      : inline-block;
+    padding-right: 20px;
+}
+
+.temperature {
+    font-family   : Roboto;
+    font-size     : 70px;
+    font-weight   : 400;
+    line-height   : 82px;
+    letter-spacing: 0em;
+    text-align    : left;
+    padding-top   : 20px;
+    padding-left  : 20px;
+}
+
+.shape-icon {
+    top: 10px;
+}
+
+.city {
+    font-family     : Roboto;
+    font-size       : 24px;
+    font-weight     : 400;
+    line-height     : 28px;
+    letter-spacing  : 0em;
+    text-align      : left;
+    background-color: #FFFFFF;
+}
+
+.city-item {
+    display        : flex;
+    text-align     : center;
+    justify-content: space-between
+}
+
+.city-item>span {
+    cursor: pointer;
+}
+
+.location-title {
+    font-family   : Roboto;
+    font-size     : 24px;
+    font-weight   : 400;
+    line-height   : 28px;
+    letter-spacing: 0em;
+    text-align    : left;
+}
+
+.locations-list {
+    font-family   : Roboto;
+    font-size     : 24px;
+    font-weight   : 400;
+    line-height   : 28px;
+    letter-spacing: 0em;
+    text-align    : left;
+    border-top    : solid 1px black;
+    padding       : 18px 15px 18px;
+}
+
+li {
+    padding-bottom: 15px;
+}
+
+.added-list {
+    background-color: #FFFFFF;
+}
+
+.location-container {
+    background-color: #FFFFFF;
+}
+
+.weather-container {
+    background-color: #FFFFFF;
+    border-right    : 1px solid black;
+}
+
+.container {
+    box-sizing     : border-box;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.weather-container {
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
+    border-left          : solid 1px black;
+    border-bottom        : solid 1px black;
+}
+
+.current-location {
+    padding        : 70px 15px 0 20px;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    gap            : 20px;
+}
+
+.temperature-container {
+    border-right: solid 1px black;
+    padding     : 20px 16px;
+}
+
+.weather-wrapper {
+    width: 600px;
+}
+
+.search-form {
+    display       : flex;
+    font-family   : Roboto;
+    font-size     : 24px;
+    font-weight   : 400;
+    line-height   : 28px;
+    letter-spacing: 0em;
+}
+
+.container {
+    min-height     : 100vh;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.cloud-icon {
+    padding-top : 20px;
+    padding-left: 20px;
+}
+
+.title {
+    padding: 20px 23px;
+}
+
+.search-title {
+    padding-top: 25px;
+}
+
+.weather-temperature {
+    display: flex;
+    gap    : 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
