@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    font-family     : "Roboto", "Helvetica", "Arial", sans-serif;
+    background-color: #fff;
+    color           : #000000;
+}
+
+.title {
+    font-family   : Roboto;
+    font-size     : 18px;
+    font-weight   : 400;
+    line-height   : 21px;
+    letter-spacing: 0em;
+    text-align    : center;
+    margin        : 10px;
+    text-transform: uppercase;
+}
+
+.container {
+    display         : flex;
+    flex-direction  : column;
+    flex-wrap       : nowrap;
+    align-items     : center;
+    justify-content : center;
+    gap             : 40px;
+    background-color: #fff;
+}
+
+.todo-container {
+    display         : flex;
+    flex-direction  : column;
+    flex-wrap       : nowrap;
+    align-items     : center;
+    justify-content : center;
+    gap             : 10px;
+    background-color: #fff;
+}
+
+.priority-container {
+    background-color: #fff;
+    display         : flex;
+    flex-direction  : column;
+    flex-wrap       : nowrap;
+    align-items     : center;
+    justify-content : center;
+}
+
+.check-status {
+    font-family   : Roboto;
+    font-size     : 18px;
+    font-weight   : 400;
+    line-height   : 21px;
+    letter-spacing: 0em;
+    text-align    : left;
+    margin        : 10px;
+}
+
+.tasks-container {
+    width: 400px;
+}
+
+.task-item {
+    list-style      : none;
+    margin-bottom   : 10px;
+    display         : flex;
+    position        : relative;
+    width           : 100%;
+    background-color: #fff;
+    border-radius   : 6px;
+    border          : 1px solid #989898;
+    gap             : 12px;
+    padding         : 12px;
+    box-sizing      : border-box;
+}
+
+.add-task {
+    width        : 100%;
+    position     : relative;
+    margin-bottom: 10px;
+}
+
+.input {
+    font-weight     : 300;
+    padding         : 10px 45px 10px 12px;
+    border          : solid #C4C4C4;
+    background-color: #fff;
+    width           : 100%;
+    border-radius   : 6px;
+    box-sizing      : border-box;
+}
+
+.icon {
+    position: absolute;
+    top     : 10px;
+    right   : 20px;
+}
+
+.add-task-button {
+    position: absolute;
+    top     : 10px;
+    right   : 20px;
+}
+
+input[type="checkbox"] {
+    width             : 21px;
+    height            : 21px;
+    border            : 1px solid #989898;
+    border-radius     : 50%;
+    background-color  : #fff;
+    appearance        : none;
+    -webkit-appearance: none;
+}
+
+input[type="checkbox"]:checked {
+    background-color  :  #C4C4C4;
+    border-color: white;
+    outline: 1px solid #989898;
+}

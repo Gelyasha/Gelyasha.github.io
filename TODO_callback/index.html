@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" />
+  <script type="module" defer src="main.js"></script>
+  <title>TODO LIST</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="todo-wrapper-container">
+
+      <div class="todo-container">
+        <div class="priority-container">
+
+          <div class="priority-title">
+            <h2 class="priority title">HIGH</h2>
+          </div>
+
+          <div class="add-task">
+
+            <form class="add-task form high" id="highPriority">
+              <input class="input" name="highPriorityTaskTitle" type="text" placeholder="Добавить важных дел" />
+
+              <button type="submit" class="icon add-task-button">
+
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line y1="-0.5" x2="18.0096" y2="-0.5"
+                    transform="matrix(0.999988 -0.00481873 0.0748716 0.997193 1 10)" stroke="#998899" />
+                  <line y1="-0.5" x2="18.0401" y2="-0.5"
+                    transform="matrix(-0.0192905 -0.999814 0.998699 0.0509976 10.5404 18.8444)" stroke="#998899" />
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <div class="tasks-container">
+
+            <ul class="task-list" id="high-priority-list">
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="priority-title">
+          <h2 class="priority title">LOW</h2>
+        </div>
+
+        <div class="add-task">
+
+          <form class="add-task-form low" id="lowPriority">
+            <input class="input" name="lowPriorityTaskTitle" type="text" placeholder="Добавить" />
+
+            <button type="submit" class="icon add-task-button">
+
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="-0.5" x2="18.0096" y2="-0.5" transform="matrix(0.999988 -0.00481873 0.0748716 0.997193 1 10)"
+                  stroke="#998899" />
+                <line y1="-0.5" x2="18.0401" y2="-0.5"
+                  transform="matrix(-0.0192905 -0.999814 0.998699 0.0509976 10.5404 18.8444)" stroke="#998899" />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="tasks-container">
+
+          <ul class="task-list" id="low-priority-list">
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+
+</html>

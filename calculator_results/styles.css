@@ -1,0 +1,35 @@
+.calculator-container {
+    font-size         : 20px;
+    display           : flex;
+    justify-content   : center;
+    align-items       : center;
+    gap               : 10px;
+    margin-top        : 40vh;
+}
+
+.value {
+    height: 33px;
+    width : 95px;
+    border: solid 1px;
+}
+
+.equals {
+    width           : 39px;
+    height          : 33px;
+    background-color: #FFFFFF;
+    border          : solid 1px;
+}
+
+.operation {
+    color           : #FFFFFF;
+    background-color: #616264;
+    width           : 45px;
+    height          : 25px;
+}
+
+.history-of-results {
+    display    : grid;
+    place-items: center;
+    margin-top: 15px;
+    font-size: 20px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator-container">
+        <div class="first-value-container" id="first-value-container">
+          <input type="text" id="first-value" class="first-input value" />
+        </div>
+        <div class="section">
+          <select class="operation" id="operation">
+            <option value="addition">+</option>
+            <option value="subtraction">-</option>
+            <option value="multiplication">*</option>
+            <option value="division">/</option>
+          </select>
+        </div>
+        <div class="second-value-container" id="second-value-container">
+          <input type="text" id="second-value" class="second-input value" />
+        </div>
+        <div class="btn-container">
+          <button id="equals" class="equals">=</button>
+        </div>
+        <div class="result-container">
+          <p id="result"></p>
+        </div>
+      </div>
+    </div>
+    <div class="history-of-results">История вычислнений:</div>
+    <div class="history-of-results" id="history-of-results"></div>
+  </body>
+</html>
