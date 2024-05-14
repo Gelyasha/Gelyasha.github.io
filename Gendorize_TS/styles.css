@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    font-family     : "Roboto", "Helvetica", "Arial", sans-serif;
+    background: linear-gradient(to bottom right, blue, pink);
+    color           : #989898;;
+}
+
+.page-title {
+    font-family   : Roboto;
+    font-size     : 18px;
+    font-weight   : 400;
+    line-height   : 21px;
+    letter-spacing: 0em;
+    color: #989898;;
+    text-align    : center;
+    margin        : 15px;
+    text-transform: uppercase;
+}
+
+.form-container {
+    display         : flex;
+    flex-direction  : column;
+    flex-wrap       : nowrap;
+    align-items     : center;
+    justify-content : center;
+    gap             : 20px;
+}
+
+.search-query {
+    font-weight     : 300;
+    padding         : 10px 45px 10px 12px;
+    border          : solid #989898;
+    width           : 100%;
+    border-radius   : 6px;
+    box-sizing      : border-box;
+}
+
+.search-container {
+    display         : flex;
+    flex-direction  : column;
+    flex-wrap       : nowrap;
+    align-items     : center;
+    justify-content : center;
+}
+
+.request-button {
+    font-weight  : 300;
+    padding      : 10px 45px 10px 12px;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #989898;
+    border       : 1px solid #989898;
+}
+
+.request-button:hover {
+	border: 1px solid #000;
+	color: #000;
+    cursor: url('./img/search.svg'), auto;
+}
+
+.request-result {
+    display    : grid;
+    place-items: center;
+    margin-top : 15px;
+    font-size  : 15px;
+}
+
