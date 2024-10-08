@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozon internship</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./progressStyles.css">
+</head>
+
+<body>
+    <div class="appWrapper">
+        <p class="title">Progress</p>
+        <section class="section">
+            <section class="sectionItem">
+                <div id="progress"></div>
+            </section>
+            <section class="sectionItem">
+                <div class="controlItem">
+                    <input id="numberInput" name="numberInput" class="numberInput" type="number" />
+                    <label for="numberInput">Value</label>
+                </div>
+                <div class="controlItem">
+                    <label class="switch">
+                        <input id="animateControl" type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Animate</span>
+                </div>
+                <div class="controlItem">
+                    <label class="switch">
+                        <input id="hideControl" type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Hide</span>
+                </div>
+
+            </section>
+        </section>
+    </div>
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>
