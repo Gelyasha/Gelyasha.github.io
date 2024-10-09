@@ -6,8 +6,13 @@ export class Progress {
     #DEGREES_PER_PERCENT = 360 / 100;
     #AVAILABLE_MODES = ['normal', 'animated', 'hidden'];
 
-    constructor() {
-
+    constructor(initialValue) {
+        if (initialValue) {
+            const isCorrect = this.#checkValue(initialValue);
+            if (isCorrect) {
+                this.#value = initialValue;
+            }
+        }
     };
 
     get value() {
@@ -28,25 +33,25 @@ export class Progress {
     set mode(value) {
         if (this.#AVAILABLE_MODES.includes(value)) {
             this.#mode = value;
+            const wrapper = this.#container.querySelector('#container');
             switch (value) {
                 case 'normal': {
-                    const element = this.#container.querySelector('#container');
-                    element.style.display = 'block';
-                    element.classList.remove('animating')
+                    wrapper.style.display = 'block';
+                    wrapper.classList.remove('animating')
                     this.#rotateLoader(this.#value);
                     break;
                 }
                 case 'animated': {
-                    const element = this.#container.querySelector('#container');
-                    element.style.display = 'block';
-                    element.classList.add('animating')
+                    wrapper.style.display = 'block';
+                    wrapper.classList.add('animating');
+                    wrapper.classList.remove('full');
+                    wrapper.classList.remove('empty');
                     break;
                 }
                 case 'hidden': {
-                    const element = this.#container.querySelector('#container');
-                    element.style.display = 'none';
-                    element.classList.remove('animating');
-                    
+                    wrapper.style.display = 'none';
+                    wrapper.classList.remove('animating');
+
                     break;
                 }
                 default: break;
@@ -62,6 +67,7 @@ export class Progress {
         const leftBlock = document.createElement('div');
         const rotateBlock = document.createElement('div');
         const centerBlock = document.createElement('div');
+        const outerBlock = document.createElement('div');
 
         wrapper.classList.add('container');
         wrapper.setAttribute('id', 'container');
@@ -70,25 +76,44 @@ export class Progress {
         rotateBlock.classList.add('rotate');
         rotateBlock.setAttribute('id', 'rotate');
         centerBlock.classList.add('center');
+        outerBlock.classList.add('outer');
 
-        wrapper.append(rightBlock, leftBlock, rotateBlock, centerBlock);
+        wrapper.append(rightBlock, leftBlock, rotateBlock, centerBlock, outerBlock);
         container.appendChild(wrapper);
 
         this.#container = container;
+
+        this.#rotateLoader(this.#value);
     }
 
     #rotateLoader(percent) {
         if (this.#container) {
             const loader = this.#container.querySelector('#rotate');
+            const wrapper = this.#container.querySelector('#container');
 
             if (percent < 51) {
                 const deg = percent * this.#DEGREES_PER_PERCENT;
                 loader.style.transform = `rotate(${deg}deg)`;
                 loader.style.backgroundColor = '#F4F7FA';
+
+                wrapper.classList.remove('full')
+                if (percent === 0) {
+                    wrapper.classList.add('empty')
+                } else {
+                    wrapper.classList.remove('empty')
+                }
+
             } else {
                 const deg = (percent - 50) * this.#DEGREES_PER_PERCENT;
                 loader.style.transform = `rotate(${deg}deg)`;
                 loader.style.backgroundColor = '#276CFF';
+
+                wrapper.classList.remove('empty')
+                if (percent === 100) {
+                    wrapper.classList.add('full')
+                } else {
+                    wrapper.classList.remove('full')
+                }
             }
         }
     }

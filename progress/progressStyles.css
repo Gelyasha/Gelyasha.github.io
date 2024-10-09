@@ -21,6 +21,17 @@ div {
     position     : absolute;
 }
 
+.outer {
+    border-radius: 50%;
+    width        : 102px;
+    height       : 102px;
+    left         : 50%;
+    top          : 50%;
+    transform    : translate(-50%, -50%);
+    position     : absolute;
+    border       : 2px solid white;
+}
+
 .right {
     border-radius   : 50%;
     clip-path       : rect(0px 100px 100px 50px);
@@ -40,13 +51,13 @@ div {
 }
 
 .rotate {
-    clip-path                : rect(0px 100px 100px 50px);
-    height                   : 100%;
-    position                 : absolute;
-    width                    : 100%;
-    border-radius            : 50%;
-    background-color         : #F4F7FA;
-    transform                : rotate(0deg);
+    clip-path       : rect(0px 100px 100px 50px);
+    height          : 100%;
+    position        : absolute;
+    width           : 100%;
+    border-radius   : 50%;
+    background-color: #F4F7FA;
+    transform       : rotate(0deg);
 }
 
 .animating .left {
@@ -60,6 +71,24 @@ div {
 .animating .rotate {
     animation       : rotate 5s infinite linear;
     background-color: #276CFF !important;
+}
+
+.empty .right {
+    display: none;
+}
+
+.empty .rotate {
+    clip-path       : none;
+    background-color: #F4F7FA;
+}
+
+.full .left {
+    display: none;
+}
+
+.full .rotate {
+    clip-path       : none;
+    background-color: #276CFF;
 }
 
 @keyframes rotate {
