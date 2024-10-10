@@ -10,8 +10,30 @@ const progress = new Progress();
 
 progress.render(container);
 
-numberInput.addEventListener('change', (event) => {
+const trimStartZeros = (str) => {
+    if (str.startsWith('0') && str.length > 1) {
+        const res = str.slice(1, str.length);
+        return trimStartZeros(res)
+    }
+    return str;
+}
+
+numberInput.addEventListener('input', (event) => {
+    event.target.value = trimStartZeros(event.target.value);
+    if (+event.target.value < 0) {
+        event.target.value = 0;
+    }
+    if (+event.target.value > 100) {
+        event.target.value = 100
+    }
+
     progress.value = +event.target.value;
+})
+
+numberInput.addEventListener('beforeinput', (event) => {
+    if (event.data && !/[0-9]/.test(event.data)) {
+        event.preventDefault()
+    }
 })
 
 animateControl.addEventListener('change', (event) => {
